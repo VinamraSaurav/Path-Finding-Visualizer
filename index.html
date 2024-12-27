@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Path Finding Visualizer</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div class="controls">
+        <button onclick="clearGrid()">Clear Grid</button>
+        <button onclick="generateRandomMaze()">Generate Random Maze</button>
+        <button onclick="visualizeBFS()">Visualize BFS</button>
+        <button onclick="visualizeDFS()">Visualize DFS</button>
+    </div>
+    <div class="mode-indicator">Current Mode: <span id="currentMode">Set Start Point</span></div>
+    <div id="grid" class="grid"></div>
+    <div class="legend">
+        <div class="legend-item">
+            <div class="legend-color" style="background-color: var(--primary-color)"></div>
+            <span>Start</span>
+        </div>
+        <div class="legend-item">
+            <div class="legend-color" style="background-color: var(--secondary-color)"></div>
+            <span>End</span>
+        </div>
+        <div class="legend-item">
+            <div class="legend-color" style="background-color: var(--wall-color)"></div>
+            <span>Wall</span>
+        </div>
+        <div class="legend-item">
+            <div class="legend-color" style="background-color: var(--visited-color)"></div>
+            <span>Visited</span>
+        </div>
+        <div class="legend-item">
+            <div class="legend-color" style="background-color: var(--path-color)"></div>
+            <span>Path</span>
+        </div>
+    </div>
+
+    <script src="js/grid.js"></script>
+    <script src="js/pathfinding.js"></script>
+    <script src="js/visualization.js"></script>
+</body>
+</html>
